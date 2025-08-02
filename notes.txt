@@ -1,0 +1,13 @@
+CRUD => 
+
+==========Databes Configuration========
+
+mysqli('hostname', 'username', 'password', 'databasename')
+
+localhost
+root
+''
+batch_17_school_mgt
+
+SELECT * FROM students
+mysqli_query(databaseconnection, query);
