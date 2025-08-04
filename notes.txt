@@ -11,3 +11,13 @@ batch_17_school_mgt
 
 SELECT * FROM students
 mysqli_query(databaseconnection, query);
+
+INSERT INTO students ('name', 'class', 'roll', 'phone', 'email', 'address', 'blood_group') VALUES ('Rafi', 'Nine', 56, '01765467895', 'abc@gmail.com', 'Mirpur', 'A+');
+
+$_POST
+$_GET
+
+POST 
+GET 
+PUT
+DELETE

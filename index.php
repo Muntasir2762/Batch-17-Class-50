@@ -26,7 +26,7 @@
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create Student</a>
+                        <a class="nav-link" href="create.php">Create Student</a>
                     </li>
                 </ul>
             </div>
@@ -46,6 +46,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Address</th>
                     <th scope="col">Blood Group</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -77,6 +78,10 @@
                     <td>'.$email.'</td>
                     <td>'.$address.'</td>
                     <td>'.$blood.'</td>
+                    <td>
+                    <a href="#" class="btn btn-primary">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                    </td>
                     </tr>';
 
                     $i++;
