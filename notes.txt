@@ -21,3 +21,9 @@ POST
 GET 
 PUT
 DELETE
+
+DELETE FROM students WHERE id=1;
+
+UPDATE FROM students set name="Test Name" WHERE id =2;
+
+SELECT * FROM students WHERE id = 3;
