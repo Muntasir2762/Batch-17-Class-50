@@ -32,12 +32,11 @@
         $address = $_POST['address'];
         $blood_group = $_POST['blood_group'];
 
-        $query = "INSERT INTO students (name, class, roll, phone, email, address, blood_group) 
-        VALUES ('$name', '$class', '$roll', '$phone', '$email', '$address', '$blood_group')";
+        $query = "UPDATE students set name='$name', class='$class', roll='$roll', phone='$phone', email='$email', address='$address', blood_group='$blood_group'   WHERE id =$id";
 
-        $insertData = mysqli_query($connection, $query);
+        $updateData = mysqli_query($connection, $query);
 
-        if($insertData == true){
+        if($updateData == true){
             header('location:index.php');
         }
         else{
@@ -105,14 +104,14 @@
             <div class="mb-3">
                 <label for="blood_group" class="form-label">Blood Group</label>
                 <select name="blood_group" id="blood_group" class="form-control" required>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
+                    <option value="A+" <?php if($blood_group == "A+"){echo 'selected';}?>>A+</option>
+                    <option value="A-" <?php if($blood_group == "A-"){echo 'selected';}?>>A-</option>
+                    <option value="B+" <?php if($blood_group == "B+"){echo 'selected';} ?>>B+</option>
+                    <option value="B-" <?php if($blood_group == "B-"){echo 'selected';} ?>>B-</option>
+                    <option value="AB+" <?php if($blood_group == "AB+"){echo 'selected';} ?>>AB+</option>
+                    <option value="AB-" <?php if($blood_group == "AB-"){echo 'selected';} ?>>AB-</option>
+                    <option value="O+" <?php if($blood_group == "O+"){echo 'selected';} ?>>O+</option>
+                    <option value="O-" <?php if($blood_group == "O-"){echo 'selected';} ?>>O-</option>
                 </select>
             </div>
             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
